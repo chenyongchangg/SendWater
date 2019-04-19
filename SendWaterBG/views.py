@@ -1,0 +1,111 @@
+from django.shortcuts import render,HttpResponse
+from . import models
+import json
+from django.http import JsonResponse
+from django.core import serializers
+from twilio.rest import Client
+
+def creatUser(request):
+    dto = models.User()
+    dto.name = request.GET['name']
+    dto.passwd = request.GET['passed']
+
+    if models.User.objects.filter(name=dto.name).exists():
+        print(models.User.objects.filter(name=dto.name).exists())
+        return JsonResponse({'msg': "failed"})
+
+    else:
+        print(models.User.objects.filter(name=dto.name).exists())
+        dto.save()
+        return JsonResponse({'msg': 'successed'})
+
+
+
+
+def commitTable(request):
+    '''dto = models.CommitTable()
+    dto.address = request.GET['address']
+    dto.amount = request.GET['amount']
+    dto.time = request.GET['time']
+
+    dto.otherMsg = request.GET['otherMsg']
+    dto.save()'''
+
+    dto = models.History()
+    dto.name = request.GET['name']
+    dto.time = request.GET['time']
+    dto.amount = request.GET['amount']
+    dto.kind = request.GET['kind']
+    dto.otherMsg = request.GET['otherMsg']
+    dto.save()
+
+    shopnumber=request.GET['otherMsg']
+    userPhone = request.GET['userPhone']
+    content = dto.name+'在'+dto.time+'时候'+'需要'+dto.amount+'桶'+dto.kind+\
+              ' 备注：'+dto.otherMsg+'     '+userPhone
+    '''
+    # Download the helper library from https://www.twilio.com/docs/python/install
+
+
+    # Your Account Sid and Auth Token from twilio.com/console
+    # DANGER! This is insecure. See http://twil.io/secure
+    account_sid = 'AC8b0152de33aac3b4d735a0c864789cc4'
+    auth_token = 'd8adba45f2bbaa94009a1418dc449c45'
+    client = Client(account_sid, auth_token)
+
+    message = client.messages \
+        .create(
+        body=content,
+        from_='+12056602109',
+        to='+86'+shopnumber,
+    )
+    message.sid
+
+
+
+
+    dto.save()'''
+
+    return HttpResponse('提交成功')
+
+
+def getAllShop(request):
+    data = {}
+    book = models.OfferMan.objects.all()
+    data['list'] = json.loads(serializers.serialize("json", book))
+    return JsonResponse(data)
+
+
+def getMyHistory(request):
+    data = {}
+    book = models.History.objects.filter(name=request.GET['name'])
+    data['list'] = json.loads(serializers.serialize("json", book))
+    return JsonResponse(data)
+
+def login(request):
+    dto = models.User.objects.filter(name=request.GET['name'])
+    passed = request.GET['passed']
+    if passed == dto[0].passwd:
+        return JsonResponse({'isCommit': True})
+    else:
+        return JsonResponse({'isCommit': False})
+
+
+def getOneShop(request):
+    data={}
+    dto = models.OfferMan.objects.filter(name=request.GET['name'])
+    data['list'] = json.loads(serializers.serialize("json", dto))
+    return JsonResponse(data)
+
+def addOfferMan(request):
+    dto = models.OfferMan()
+    dto.kind = request.GET['kind']
+    dto.name = request.GET['name']
+    dto.count = request.GET['count']
+    dto.number = request.GET['number']
+    dto.othermsg = request.GET['othermsg']
+    dto.prize = request.GET['prize']
+    dto.save()
+    return HttpResponse('添加成功')
+
+

@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from SendWaterBG import views
 
 urlpatterns = [
+
     path('admin/', admin.site.urls),
+    path('creatuser', views.creatUser),
+    path('committable', views.commitTable),
+    path('getallshop', views.getAllShop),
+    path('getoneshop', views.getOneShop),
+    path('gethistory', views.getMyHistory),
+    path('login', views.login),
+    path('addofferman', views.addOfferMan),
+
 ]
+
