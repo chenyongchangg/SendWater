@@ -27,6 +27,9 @@ urlpatterns = [
     path('gethistory', views.getMyHistory),
     path('login', views.login),
     path('addofferman', views.addOfferMan),
+    path('addadmin', views.addAdmin),
+    path('adminlogin', views.adminLogin),
+
 
 ]
 
