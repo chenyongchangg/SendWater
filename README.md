@@ -1,5 +1,5 @@
 
-# <table><tr><td bgcolor=#817936> SendWater Version2.0</td></tr></table>
+# <table><tr><td bgcolor=#817936> SendWater Version2.0  http://144.168.59.162:8003</td></tr></table>
 
 --------
 
@@ -16,6 +16,8 @@ dto.passwd = request.GET['passed']
 ------
 
  > 提交送水信息	 path('committable', views.commitTable),
+
+*注意：这个接口的时间非常长，大概10s左右，返回发送成功或者失败，每次会发送信息到送水员（比如我）的手机，耗费0.73RMB，有500条免费信息*
 
 ```c
 dto = models.CommitTable()
