@@ -40,7 +40,8 @@ def commitTable(request):
         shopnumber = "13287498539"
 
         content = dto.name+'在'+dto.time+'时候'+'需要'+dto.amount+'桶'+dto.kind+\
-                  ' 备注：'+dto.otherMsg+'     '+dto.userPhone
+                  ' 备注：'+dto.otherMsg+'     '+'我的地址：  '+dto.address+\
+                  '我的电话： '+dto.userPhone
 
         # Download the helper library from https://www.twilio.com/docs/python/install
     

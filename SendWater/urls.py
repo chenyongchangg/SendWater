@@ -19,7 +19,7 @@ from SendWaterBG import views
 
 urlpatterns = [
 
-    path('admin/', admin.site.urls),
+    path('admin', admin.site.urls),
     path('creatuser', views.creatUser),
     path('committable', views.commitTable),
     path('getallshop', views.getAllShop),
