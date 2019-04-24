@@ -138,6 +138,7 @@ def addAdmin(request):
         dto = models.admin()
         dto.passed = request.GET['passed']
         dto.name = request.GET['name']
+        dto.boss = request.GET['boss']
         return HttpResponse('添加成功')
     except IOError:
         return HttpResponse("操作失败")
@@ -155,4 +156,12 @@ def adminLogin(request):
         return HttpResponse("操作失败")
 
 
+def getMyCustomers(request):
+    try:
+        dto = models.CommitTable.objects.filter(name=request.GET['boss'])
+        data = {}
+        data['list'] = json.loads(serializers.serialize("json", dto))
+        return JsonResponse(data)
+    except IOError:
+        return HttpResponse("操作失败")
 

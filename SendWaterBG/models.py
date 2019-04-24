@@ -28,3 +28,5 @@ class CommitTable(models.Model):
 class admin(models.Model):
     name = models.CharField(max_length=30)
     passed = models.CharField(max_length=130)
+    boss = models.CharField(max_length=130)
+

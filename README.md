@@ -83,3 +83,10 @@ dto.name = request.GET['name']
 dto=models.admin.objects.filter(name=request.GET['name'])
 passed = request.GET['passed']
 ```
+-----
+
+>管理员获取我的客户历史 path('getmycustomers', views.getMyCustomers)
+
+```python
+dto = models.CommitTable.objects.filter(name=request.GET['boss'])
+```
