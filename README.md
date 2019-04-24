@@ -74,6 +74,7 @@ dto.othermsg = request.GET['othermsg']
 ```c
 dto.passed = request.GET['passed']
 dto.name = request.GET['name']
+dto.boss = request.GET['boss']
 ```
 ---------
 
