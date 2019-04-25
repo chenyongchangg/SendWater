@@ -135,11 +135,16 @@ def addOfferMan(request):
 
 def addAdmin(request):
     try:
-        dto = models.admin()
-        dto.passed = request.GET['passed']
-        dto.name = request.GET['name']
-        dto.boss = request.GET['boss']
-        return HttpResponse('添加成功')
+        if models.User.objects.filter(name=request.GET['name']).exists():
+
+            return JsonResponse({'msg': "failed"})
+
+        else:
+            dto = models.admin()
+            dto.passed = request.GET['passed']
+            dto.name = request.GET['name']
+            dto.boss = request.GET['boss']
+            return HttpResponse('添加成功')
     except IOError:
         return HttpResponse("操作失败")
 
