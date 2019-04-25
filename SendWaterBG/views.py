@@ -10,7 +10,7 @@ def creatUser(request):
     try:
         dto = models.User()
         dto.name = request.GET['name']
-        dto.passwd = request.GET['passed']
+        dto.passed = request.GET['passed']
 
         if models.User.objects.filter(name=dto.name).exists():
             print(models.User.objects.filter(name=dto.name).exists())
@@ -90,8 +90,8 @@ def login(request):
         dto = models.User.objects.filter(name=request.GET['name'])
         passed = request.GET['passed']
         print(passed)
-        print(dto[0].passwd)
-        if passed == dto[0].passwd:
+        print(dto[0].passed)
+        if passed == dto[0].passed:
             return JsonResponse({'isCommit': True})
         else:
             return JsonResponse({'isCommit': False})
@@ -153,8 +153,12 @@ def adminLogin(request):
     try:
         dto = models.admin.objects.filter(name=request.GET['name'])
         passed = request.GET['passed']
-        if passed == dto[0].passwd:
-            return JsonResponse({'isCommit': True})
+        if passed == dto[0].passed:
+            dto = models.admin.objects.filter(boss=request.GET['boss'])
+            dto = models.CommitTable.objects.filter(name=dto[0].boss)
+            data = {}
+            data['list'] = json.loads(serializers.serialize("json", dto))
+            return JsonResponse(data)
         else:
             return JsonResponse({'isCommit': False})
     except IOError:
