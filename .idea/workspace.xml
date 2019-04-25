@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c8ca4f1d-ee5b-4b74-bd81-49fce9e26fcf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/SendWaterBG/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SendWaterBG/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,8 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SendWaterBG/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="157" column="62" selection-start-line="157" selection-start-column="62" selection-end-line="157" selection-end-column="62" />
+            <state relative-caret-position="212">
+              <caret line="156" column="68" selection-start-line="156" selection-start-column="68" selection-end-line="156" selection-end-column="68" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -210,12 +209,12 @@
       <workItem from="1556013554063" duration="7558000" />
       <workItem from="1556024910680" duration="681000" />
       <workItem from="1556064289793" duration="2009000" />
-      <workItem from="1556200914712" duration="1269000" />
+      <workItem from="1556200914712" duration="1494000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18045000" />
+    <option name="totallyTimeSpent" value="18270000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -312,8 +311,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SendWaterBG/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="157" column="62" selection-start-line="157" selection-start-column="62" selection-end-line="157" selection-end-column="62" />
+        <state relative-caret-position="212">
+          <caret line="156" column="68" selection-start-line="156" selection-start-column="68" selection-end-line="156" selection-end-column="68" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>

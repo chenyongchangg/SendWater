@@ -154,7 +154,7 @@ def adminLogin(request):
         dto = models.admin.objects.filter(name=request.GET['name'])
         passed = request.GET['passed']
         if passed == dto[0].passed:
-            dto = models.admin.objects.filter(boss=request.GET['boss'])
+            dto = models.admin.objects.filter(name=request.GET['name'])
             dto = models.CommitTable.objects.filter(name=dto[0].boss)
             data = {}
             data['list'] = json.loads(serializers.serialize("json", dto))
