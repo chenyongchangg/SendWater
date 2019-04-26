@@ -144,6 +144,7 @@ def addAdmin(request):
             dto.passed = request.GET['passed']
             dto.name = request.GET['name']
             dto.boss = request.GET['boss']
+            dto.save()
             return HttpResponse('添加成功')
     except IOError:
         return HttpResponse("操作失败")
