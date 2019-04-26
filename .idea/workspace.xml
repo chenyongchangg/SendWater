@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8ca4f1d-ee5b-4b74-bd81-49fce9e26fcf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/SendWaterBG/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/SendWaterBG/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SendWaterBG/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SendWaterBG/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
@@ -28,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SendWater/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            <state relative-caret-position="198">
+              <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
               <folding>
                 <element signature="e#633#665#0" expanded="true" />
               </folding>
@@ -76,8 +77,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SendWaterBG/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="291">
+              <caret line="168" column="52" selection-start-line="168" selection-start-column="52" selection-end-line="168" selection-end-column="52" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -88,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SendWaterBG/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+            <state relative-caret-position="350">
+              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -102,6 +103,10 @@
       <find>History</find>
       <find>kind</find>
       <find>passwd</find>
+      <find>Commi</find>
+      <find>getmy</find>
+      <find>shop</find>
+      <find>comm</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -211,12 +216,12 @@
       <workItem from="1556024910680" duration="681000" />
       <workItem from="1556064289793" duration="2009000" />
       <workItem from="1556200914712" duration="1787000" />
-      <workItem from="1556244208711" duration="1680000" />
+      <workItem from="1556244208711" duration="7069000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20243000" />
+    <option name="totallyTimeSpent" value="25632000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -236,7 +241,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31848186" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15016502" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -268,25 +273,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SendWater/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding>
-            <element signature="e#633#665#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SendWaterBG/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SendWaterBG/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -304,17 +296,30 @@
     <entry file="file://$PROJECT_DIR$/SendWaterBG/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/SendWater/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding>
+            <element signature="e#633#665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SendWaterBG/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/SendWaterBG/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        <state relative-caret-position="350">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SendWaterBG/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="291">
+          <caret line="168" column="52" selection-start-line="168" selection-start-column="52" selection-end-line="168" selection-end-column="52" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>

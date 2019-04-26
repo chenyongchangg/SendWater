@@ -23,6 +23,8 @@ class CommitTable(models.Model):
     userPhone = models.CharField(max_length=130)
     otherMsg = models.CharField(max_length=230)
     kind = models.CharField(max_length=130, default="none")
+    shopnumber = models.CharField(max_length=130, default="none")
+    shopname  = models.CharField(max_length=130, default="none")
 
 
 class admin(models.Model):

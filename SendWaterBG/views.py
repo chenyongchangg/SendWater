@@ -35,13 +35,12 @@ def commitTable(request):
         dto.kind = request.GET['kind']
         dto.userPhone = request.GET['userphone']
         dto.otherMsg = request.GET['othermsg']
+        dto.shopnumber = request.GET['shopnumber']
+        dto.shopname = request.GET['shopname']
         dto.save()
 
-        shopnumber = "13287498539"
-
-        content = dto.name+'在'+dto.time+'时候'+'需要'+dto.amount+'桶'+dto.kind+\
-                  ' 备注：'+dto.otherMsg+'     '+'我的地址：  '+dto.address+\
-                  '我的电话： '+dto.userPhone
+        content = dto.address+'在'+dto.time+'需要'+dto.amount+'桶'+dto.kind +\
+                 '我的电话： ' + dto.userPhone + ' 备注：'+dto.otherMsg
 
         # Download the helper library from https://www.twilio.com/docs/python/install
     
@@ -56,7 +55,7 @@ def commitTable(request):
             .create(
             body=content,
             from_='+12056602109',
-            to='+86'+shopnumber,
+            to='+86'+dto.shopnumber,
         )
         message.sid
         dto.save()
@@ -134,7 +133,7 @@ def addOfferMan(request):
 
 def addAdmin(request):
     try:
-        if models.User.objects.filter(name=request.GET['name']).exists():
+        if models.admin.objects.filter(name=request.GET['name']).exists():
 
             return JsonResponse({'msg': "failed"})
 
@@ -167,7 +166,7 @@ def adminLogin(request):
 
 def getMyCustomers(request):
     try:
-        dto = models.CommitTable.objects.filter(name=request.GET['boss'])
+        dto = models.CommitTable.objects.filter(shopname=request.GET['boss'])
         data = {}
         data['list'] = json.loads(serializers.serialize("json", dto))
         return JsonResponse(data)
