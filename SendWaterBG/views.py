@@ -10,7 +10,7 @@ def creatUser(request):
     try:
         dto = models.User()
         dto.name = request.GET['name']
-        dto.passed = request.GET['passed']
+        dto.passwd = request.GET['passed']
 
         if models.User.objects.filter(name=dto.name).exists():
             print(models.User.objects.filter(name=dto.name).exists())
@@ -89,7 +89,7 @@ def login(request):
     try:
         dto = models.User.objects.filter(name=request.GET['name'])
         passed = request.GET['passed']
-
+        print(dto[0].passwd)
         if passed == dto[0].passwd:
             return JsonResponse({'isCommit': True})
         else:
