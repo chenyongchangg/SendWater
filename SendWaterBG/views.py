@@ -89,9 +89,8 @@ def login(request):
     try:
         dto = models.User.objects.filter(name=request.GET['name'])
         passed = request.GET['passed']
-        print(passed)
-        print(dto[0].passed)
-        if passed == dto[0].passed:
+
+        if passed == dto[0].passwd:
             return JsonResponse({'isCommit': True})
         else:
             return JsonResponse({'isCommit': False})
