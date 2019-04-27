@@ -151,16 +151,17 @@ def addAdmin(request):
 
 def adminLogin(request):
     try:
-        dto = models.admin.objects.filter(name=request.GET['name'])
-        passed = request.GET['passed']
-        if passed == dto[0].passed:
-            dto = models.CommitTable.objects.filter(name=request.GET['name'])
-            dto = models.CommitTable.objects.filter(shopname=dto[0].shopname)
-            data = {}
-            data['list'] = json.loads(serializers.serialize("json", dto))
-            return JsonResponse(data)
-        else:
-            return JsonResponse({'isCommit': False})
+        if models.admin.objects.filter(name=request.GET['name']).exists():
+            dto = models.admin.objects.filter(name=request.GET['name'])
+            passed = request.GET['passed']
+            if passed == dto[0].passed:
+                dto = models.CommitTable.objects.filter(shopname=dto[0].boss)
+
+                data = {}
+                data['list'] = json.loads(serializers.serialize("json", dto))
+                return JsonResponse(data)
+            else:
+                return JsonResponse({'isCommit': False})
     except IOError:
         return HttpResponse("操作失败")
 
