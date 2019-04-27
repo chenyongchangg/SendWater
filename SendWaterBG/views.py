@@ -122,10 +122,12 @@ def addOfferMan(request):
 
             return HttpResponse("修改成功")
         else:
-            dto = models.OfferMan()
+            dto = models.OfferMan.objects.get(name=request.GET['name'])
+            dto.kind = request.GET['kind']
             dto.name = request.GET['name']
+            dto.count = request.GET['count']
             dto.number = request.GET['number']
-            dto.otherMsg = request.GET['othermsg']
+            dto.othermsg = request.GET['othermsg']
             dto.save()
             return HttpResponse('添加成功')
     except IOError:
