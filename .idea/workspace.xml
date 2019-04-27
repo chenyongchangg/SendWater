@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8ca4f1d-ee5b-4b74-bd81-49fce9e26fcf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SendWaterBG/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SendWaterBG/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/SendWaterBG/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="369">
-              <caret line="124" column="71" selection-start-line="124" selection-start-column="71" selection-end-line="124" selection-end-column="71" />
+              <caret line="124" column="33" lean-forward="true" selection-start-line="124" selection-start-column="33" selection-end-line="124" selection-end-column="33" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -221,12 +220,12 @@
       <workItem from="1556200914712" duration="1787000" />
       <workItem from="1556244208711" duration="7710000" />
       <workItem from="1556345687406" duration="7154000" />
-      <workItem from="1556364983285" duration="233000" />
+      <workItem from="1556364983285" duration="435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33660000" />
+    <option name="totallyTimeSpent" value="33862000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -324,7 +323,7 @@
     <entry file="file://$PROJECT_DIR$/SendWaterBG/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
-          <caret line="124" column="71" selection-start-line="124" selection-start-column="71" selection-end-line="124" selection-end-column="71" />
+          <caret line="124" column="33" lean-forward="true" selection-start-line="124" selection-start-column="33" selection-end-line="124" selection-end-column="33" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>

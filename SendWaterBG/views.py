@@ -122,7 +122,7 @@ def addOfferMan(request):
 
             return HttpResponse("修改成功")
         else:
-            dto = models.OfferMan.objects.get(name=request.GET['name'])
+            dto = models.OfferMan()
             dto.kind = request.GET['kind']
             dto.name = request.GET['name']
             dto.count = request.GET['count']
