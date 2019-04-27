@@ -154,8 +154,8 @@ def adminLogin(request):
         dto = models.admin.objects.filter(name=request.GET['name'])
         passed = request.GET['passed']
         if passed == dto[0].passed:
-            dto = models.admin.objects.filter(name=request.GET['name'])
-            dto = models.CommitTable.objects.filter(name=dto[0].boss)
+            dto = models.CommitTable.objects.filter(name=request.GET['name'])
+            dto = models.CommitTable.objects.filter(shopname=dto[0].shopname)
             data = {}
             data['list'] = json.loads(serializers.serialize("json", dto))
             return JsonResponse(data)
@@ -174,3 +174,12 @@ def getMyCustomers(request):
     except IOError:
         return HttpResponse("操作失败")
 
+
+def getAllCommitTable(request):
+    try:
+        dto = models.CommitTable.objects.all()
+        data = {}
+        data['list'] = json.loads(serializers.serialize("json", dto))
+        return JsonResponse(data)
+    except IOError:
+        return HttpResponse("操作失败")

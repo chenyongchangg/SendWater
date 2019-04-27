@@ -29,7 +29,8 @@ urlpatterns = [
     path('addofferman', views.addOfferMan),
     path('addadmin', views.addAdmin),
     path('adminlogin', views.adminLogin),
-    path('getmycustomers', views.getMyCustomers)
+    path('getmycustomers', views.getMyCustomers),
+    path('getallcommittable', views.getAllCommitTable)
 
 
 ]
