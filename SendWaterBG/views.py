@@ -37,6 +37,7 @@ def commitTable(request):
         dto.otherMsg = request.GET['othermsg']
         dto.shopnumber = request.GET['shopnumber']
         dto.shopname = request.GET['shopname']
+        shopnumber = dto.shopname;
         dto.save()
 
         content = dto.address+'在'+dto.time+'需要'+dto.amount+'桶'+dto.kind +\
@@ -44,7 +45,7 @@ def commitTable(request):
 
         # Download the helper library from https://www.twilio.com/docs/python/install
     
-    
+    #shopnumber bug
         # Your Account Sid and Auth Token from twilio.com/console
         # DANGER! This is insecure. See http://twil.io/secure
         account_sid = 'AC8b0152de33aac3b4d735a0c864789cc4'
@@ -55,7 +56,7 @@ def commitTable(request):
             .create(
             body=content,
             from_='+12056602109',
-            to='+86'+dto.shopnumber,
+            to='+86'+shopnumber,
         )
         message.sid
         dto.save()
