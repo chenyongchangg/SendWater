@@ -37,7 +37,7 @@ def commitTable(request):
         dto.otherMsg = request.GET['othermsg']
         dto.shopnumber = request.GET['shopnumber']
         dto.shopname = request.GET['shopname']
-        shopnumber = dto.shopname;
+        shopnumber = request.GET['shopnumber']
         dto.save()
 
         content = dto.address+'在'+dto.time+'需要'+dto.amount+'桶'+dto.kind +\

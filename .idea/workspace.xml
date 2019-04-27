@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8ca4f1d-ee5b-4b74-bd81-49fce9e26fcf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/SendWater/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SendWater/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SendWaterBG/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SendWaterBG/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SendWaterBG/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="157" column="60" selection-start-line="157" selection-start-column="60" selection-end-line="157" selection-end-column="60" />
+            <state relative-caret-position="33">
+              <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -220,12 +220,12 @@
       <workItem from="1556064289793" duration="2009000" />
       <workItem from="1556200914712" duration="1787000" />
       <workItem from="1556244208711" duration="7710000" />
-      <workItem from="1556345687406" duration="4000000" />
+      <workItem from="1556345687406" duration="4507000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30273000" />
+    <option name="totallyTimeSpent" value="30780000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -322,8 +322,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SendWaterBG/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="157" column="60" selection-start-line="157" selection-start-column="60" selection-end-line="157" selection-end-column="60" />
+        <state relative-caret-position="33">
+          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
